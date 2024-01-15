@@ -1,0 +1,11 @@
+scenarioName,username,password,age,expectedMessage
+successfulSignUp,user,Password@123,12,Welcome user
+testSignUpWithIncorrectUsernamePasswordAndAg,12345,Password123,0,Error: Please enter a valid Username
+testSignUpWithNumbersAndSpecialCharacterUsername,123#45@,Password@123,12,Error: Please enter a valid Username
+testSignUpWithoutUsername, ,Password@123,12,Error: Please enter a valid Username
+testSignUpWithWeakPassword,user,password,12,Error: Please enter a valid Password
+testSignUpWithoutPassword,user, ,12,Error: Please enter a valid Password
+testSignUpWithAgeAboveLimit,user,Password@123,100,Error: Please enter a valid Age
+testSignUpWithAgeBelowLimit,user,Password@123,-1,Error: Please enter a valid Age
+testSignUpWithOutAge,user,Password@123, ,Error: Please enter a valid Age
+testSignUpWithOutUsernamePasswordAndAge, , , ,Error: Please enter a valid Username

@@ -1,0 +1,68 @@
+
+{
+    "successfulSignUp": {
+      "username": "user",
+      "password": "Password@123",
+      "age": "12",
+      "expectedWelcomeMessage": "Welcome user"
+      
+    },
+    "testSignUpWithIncorrectUsernamePasswordAndAge": {
+      "username": "12345",
+      "password": "password123",
+      "age": "0",
+      "expectedErrorMessage": "Error: Please enter a valid Username"
+      
+    },
+    "testSignUpWithNumbersAndSpecialCharacterUsername": {
+      "username": "12@345#",
+      "password": "Password@123",
+      "age": "12",
+      "expectedErrorMessage": "Error: Please enter a valid Username"
+    },
+    "emptyUsername": {
+      "username": " ",
+      "password": "Password@123",
+      "age": "12",
+      "expectedErrorMessage": "Error: Please enter a valid Username"
+
+    },
+    "testSignUpWithWeakPassword": {
+      "username": "user",
+      "password": "password123",
+      "age": "12",
+      "expectedErrorMessage": "Error: Please enter a valid Password"
+    },
+    "testSignUpWithoutPassword": {
+      "username": "user",
+      "password": " ",
+      "age": "12",
+      "expectedErrorMessage": "Error: Please enter a valid Password"
+    },
+    "testSignUpWithIncorrectAgeAboveLimit": {
+      "username": "user",
+      "password": "Password@123",
+      "age": "100",
+      "expectedErrorMessage": "Error: Please enter a valid Age"
+    }, 
+    "testSignUpWithIncorrectAgeBelowLimit": {
+      "username": "user",
+      "password": "Password@123",
+      "age": "-1",
+      "expectedErrorMessage": "Error: Please enter a valid Age"
+    },
+    "testSignUpWithoutAge": {
+      "username": "user",
+      "password": "Password@123",
+      "age": " ",
+      "expectedErrorMessage": "Error: Please enter a valid Age"
+    }, 
+    "testSignUpWithoutCredentials": {
+      "username": " ",
+      "password": " ",
+      "age": " ",
+      "expectedErrorMessage": "Error: Please enter a valid Username"
+    }
+
+  }
+  
